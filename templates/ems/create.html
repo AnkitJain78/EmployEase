@@ -1,0 +1,12 @@
+{% extends "base/base.html" %} {% block title %}
+<title>EmployEase | Create a Employee</title>
+{% endblock title %} {% block content %}
+<div class="container py-4">
+  {% include "partials/navbar.html" %}
+  <form enctype="multipart/form-data" method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="btn btn-info">Add Employee</button>
+  </form>
+  {% include "partials/footer.html" %}
+</div>
+{% endblock content %}
